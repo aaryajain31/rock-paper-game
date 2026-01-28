@@ -1,26 +1,64 @@
 import random
 
-print("choose option rock paper scissors")
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
 
-user = input("enter choice: ").lower()
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+
+print("Choose: rock, paper, scissors")
+user = input("Enter choice: ").lower()
+
 options = ["rock", "paper", "scissors"]
-
 computer = random.choice(options)
 
-print("you choose", user)
-print("computer choose", computer)
-
-if user == computer:
-    print("tie")
-
-elif user == "rock" and computer == "scissors": 
-    print("you win")
-
-elif user == "paper" and computer == "rock": 
-    print("you win")
-
-elif user == "scissors" and computer == "paper": 
-    print("you win")
-    
+print("\nYou chose:")
+if user == "rock":
+    print(rock)
+elif user == "paper":
+    print(paper)
+elif user == "scissors":
+    print(scissors)
 else:
-    print("you lose")
+    print("Invalid input")
+
+print("Computer chose:")
+if computer == "rock":
+    print(rock)
+elif computer == "paper":
+    print(paper)
+elif computer == "scissors":
+    print(scissors)
+
+# Game logic
+if user == computer:
+    print("It's a tie!")
+elif user == "rock" and computer == "scissors":
+    print("You win! Rock crushes scissors ")
+elif user == "paper" and computer == "rock":
+    print("You win! Paper covers rock ")
+elif user == "scissors" and computer == "paper":
+    print("You win! Scissors cut paper ")
+else:
+    print("You lose ")
