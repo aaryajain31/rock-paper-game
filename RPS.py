@@ -1,4 +1,4 @@
-import random
+import random 
 
 rock = """
     _______
@@ -62,3 +62,4 @@ elif user == "scissors" and computer == "paper":
     print("You win! Scissors cut paper ")
 else:
     print("You lose ")
+
