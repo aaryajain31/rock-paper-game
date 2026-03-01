@@ -3,7 +3,7 @@ import random
 rock = """  
     _______
 ---'   ____)
-      (_____)
+      (_____)  
       (_____)
       (____)
 ---.__(___)
@@ -62,6 +62,7 @@ elif user == "scissors" and computer == "paper":
     print("You win! Scissors cut paper ")
 else:
     print("You lose ")
+
 
 
 
